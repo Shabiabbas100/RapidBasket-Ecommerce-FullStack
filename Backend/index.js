@@ -9,6 +9,7 @@ import connectDB from "./config/connectDB.js"
 import userRouter from './routers/user.routes.js'
 import uploadRouter from './routers/upload.route.js'
 import orderRouter from './routers/order.route.js'
+import addressRouter from "./routers/address.route.js"
 connectDB()
 
 const PORT = 8080 || process.env.PORT 
@@ -37,3 +38,4 @@ app.listen(PORT,()=>{
 app.use('/api/user',userRouter)
 app.use("/api/file",uploadRouter)
 app.use("/api/order",orderRouter)
+app.use("/api/address",addressRouter)
